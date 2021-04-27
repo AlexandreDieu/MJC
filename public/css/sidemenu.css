@@ -1,0 +1,132 @@
+html,body {
+  margin: 0;
+  background: #EFEDEB;
+}
+
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 3.5vw;
+  height: 2vw;
+  padding-bottom: 2vw;
+  text-align: center;
+  font-size:1.75vw;
+}
+    
+.main-menu:hover,aside.main-menu.expanded {
+  width:14vw;
+  overflow:visible;
+}
+  
+.main-menu {
+  background:rgba(154, 100, 99, 1);
+  border-right:1px solid #e5e5e5;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;;
+  height:100vh;
+  padding-top: 10vh;
+  margin-top: 5vh;
+  width:3.2vw;
+  overflow:hidden;
+  transition: width 0.2s linear;
+  z-index:1000;
+  border: none;
+}
+  
+.main-menu>ul {
+  margin:7px 0;
+}
+  
+.main-menu li {
+  position:relative;
+  display:block;
+  width:250px;
+}
+  
+.main-menu li>a {
+  position:relative;
+  display:table;
+  border-collapse:collapse;
+  border-spacing:0;
+  color:white;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration:none;
+}
+  
+.main-menu .aside-icon {
+  position:relative;
+  display:table-cell;
+  width:60px;
+  height:60px;
+  text-align:center;
+  vertical-align:middle;
+  font-size:20px;
+}
+  
+.main-menu .aside-text {
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  width:190px;
+  padding-bottom: 30px;
+  font-family: 'roboto';
+  font-size:1.2vw;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y:hidden;
+}
+  
+.no-touch .scrollable.hover:hover {
+  overflow-y:auto;
+  overflow:visible;
+}
+  
+a:hover,a:focus {
+  text-decoration:none;
+}
+ 
+aside ul,aside li {
+  outline:0;
+  margin:0;
+  padding:0;
+}
+
+.lien-tableau:hover {
+  color:rgba(255, 255, 255, 255);
+}
+
+.lien-adherents:hover {
+  color:rgba(0, 155, 255, 1);
+}
+
+.lien-partenaires:hover {
+  color:rgba(225, 128, 198, 1);
+}
+
+.lien-activites:hover {
+  color : rgba(255, 138, 0, 1);
+}
+
+.lien-evenements:hover {
+  color :rgba(255, 76, 76, 1);
+}
+
+.lien-newsletter:hover {
+  color :rgba(84, 62, 221, 1);
+}
+
+.lien-statistiques:hover {
+  color :rgba(217, 169, 2, 1);
+}
+
+.lien-import:hover {
+  color :rgba(4, 117, 1, 1);
+}
+
+.lien-permissions:hover {
+  color :rgba(73, 73, 73, 1);
+}

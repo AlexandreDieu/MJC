@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  margin: 3vw;
+}
+h1 {
+  text-align: center;
+  color: rgb(24, 22, 22);
+  font-size: 3vw;
+}
+.statContainer{
+  margin:50px auto;
+  height: 200px;
+  width:75%;
+  border-radius: 25px;
+  background-color: #C4C4C4;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4vw;
+  row-gap: 2vw;
+  width: 90%;
+  margin: auto;
+  grid-template-areas: 
+  "btn1 btn2 btn3 btn4"
+  "btn5 btn6 btn7 btn8";
+}
+.button{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.8em;
+  background: #E2e2e1;
+  height: 7vw;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+.button:hover {
+  transition: none;
+  transform: scale(1.1);
+}
+.container > a > i {
+  font-size: 3.5vw;
+  margin: 1vw;
+}
+p {
+  font-weight: bold;
+  font-size: 1.8vw;
+}
+.button1 {
+  grid-area: btn1;
+  color: #009BFF; 
+  border: 2px solid #009BFF;
+}
+.button1:hover {
+  background: #009bff;
+  color: white;
+}
+.button2 {
+  grid-area: btn2;
+  color: #E180C6; 
+  border: 2px solid  #E180C6;
+}
+.button2:hover {
+  background: #E180C6;
+  color: white;
+}
+.button3 {
+  grid-area: btn3;
+  color: #FF8A00; 
+  border: 2px solid  #FF8A00;
+}
+.button3:hover {
+  background: #FF8A00;
+  color: white;
+}
+.button4 {
+  grid-area: btn4;
+  color: #E44747; 
+  border: 2px solid  #E44747;
+}
+.button4:hover {
+  background: #E44747;
+  color: white;
+}
+.button5 {
+  grid-area: btn5;
+  color: #543EDD; 
+  border: 2px solid  #543EDD;
+}
+.button5:hover {
+  background: #543EDD;
+  color: white;
+}
+.button6 {
+  grid-area: btn6;
+  color: #047501; 
+  border: 2px solid  #047501;
+}
+.button6:hover {
+  background: #047501;
+  color: white;
+}
+.button7 {
+  grid-area: btn7;
+  color: #D9A902; 
+  border: 2px solid  #D9A902;
+}
+.button7:hover {
+  background: #D9A902;
+  color: white;
+}
+.button8 {
+  grid-area: btn8;
+  color: #2d2d2d;
+  border: 2px solid #2d2d2d;
+}
+.button8:hover {
+  background: #2d2d2d;
+  color: white;
+}

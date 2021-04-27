@@ -1,0 +1,18 @@
+{% block body %}
+	<nav>
+		<img src="./Assets/img/Logo.png" alt="">
+		<div class="barre-recherche">
+			<input class="top-menu" type="search">
+			<button class="top-menu-button" type="submit">
+				<i class="fas fa-search"></i>
+			</button>
+		</div>
+				{% if app.user %}
+			<div class="mb-3">
+				You are logged in as
+				{{ app.user.username }},
+				<a href="{{ path('app_logout') }}"><i class="fas fa-power-off"></i></a>
+			</div>
+		{% endif %}
+	</nav>
+{% endblock %}

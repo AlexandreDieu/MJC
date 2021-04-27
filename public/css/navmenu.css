@@ -1,0 +1,74 @@
+body {
+    background: #EFEDEB;
+  }
+  nav {
+      position : fixed;
+      top:0;
+      display: grid;
+      height : 5vh;
+      align-items: center;
+      width: 100%;
+      background:rgba(154, 100, 99, 1);
+      grid-template-columns: 6vw auto 15vw auto 10vw;
+      grid-template-rows: 5vh;
+      grid-template-areas: 
+      "logo . barre . admin"
+    }
+    img {
+      grid-area: logo;
+      margin-left: 1vw;
+      width: 6vw;
+      height: 2vw;
+    }
+    .barre-recherche{
+      grid-area: barre;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "input submit";
+    }
+    .top-menu {
+      border-radius: 30px 0 0 30px;
+      width: 13vw;
+      height: 1.5vw;
+      margin: 0;
+      border: none;
+      grid-area : input;
+      align-self: center;
+    }
+    
+    .top-menu-button {
+      border-radius: 0 30px 30px 0;
+      width: 2vw;
+      height : 1.5vw;
+      margin: 0;
+      border: none;
+      background-color: lightslategrey;
+      grid-area :submit;
+    }
+    
+    .admin {
+      display: grid;
+      grid-template-columns: auto 2.5vw;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+      "nom btn"
+      "grade btn";
+      grid-area: admin;
+    }
+    .admin :nth-child(1) {
+        grid-area: nom;
+    }
+    .admin :nth-child(2) {
+        grid-area: grade;
+    }
+    .admin :nth-child(3) {
+        grid-area: btn;
+        align-self: center;
+    }
+    .fas {
+    color : white;
+    font-size: 1.1vw;
+    }
+    var {
+      font-size: 1vw;
+    }

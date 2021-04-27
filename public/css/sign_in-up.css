@@ -2,6 +2,7 @@ body {
     background-image: linear-gradient(246.39deg, rgba(255, 255, 255, 0.9) 0.79%, rgba(152, 160, 172, 0.9) 97.56%), url(../img/fondinscription.png);
     background-size: cover;
     color: white;
+    
 }
 section {
     position: absolute;
