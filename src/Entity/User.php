@@ -68,15 +68,17 @@ class User implements UserInterface
      */
     private $telephone;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $statutInscription;
+
 
     /**
      * @ORM\Column(type="boolean")
      */
     private $newsletter;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $securiteSociale;
     
     public function __construct()
     {
@@ -267,18 +269,6 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getStatutInscription(): ?bool
-    {
-        return $this->statutInscription;
-    }
-
-    public function setStatutInscription(bool $statutInscription): self
-    {
-        $this->statutInscription = $statutInscription;
-
-        return $this;
-    }
-
     public function getNewsletter(): ?bool
     {
         return $this->newsletter;
@@ -287,6 +277,18 @@ class User implements UserInterface
     public function setNewsletter(bool $newsletter): self
     {
         $this->newsletter = $newsletter;
+
+        return $this;
+    }
+
+    public function getSecuriteSociale(): ?string
+    {
+        return $this->securiteSociale;
+    }
+
+    public function setSecuriteSociale(string $securiteSociale): self
+    {
+        $this->securiteSociale = $securiteSociale;
 
         return $this;
     }

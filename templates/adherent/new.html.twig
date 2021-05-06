@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User
+{% endblock %}
+
+{% block body %}
+	<main>
+		<h1>Create new User</h1>
+		{{ include('adherent/_form.html.twig') }}
+
+		<a href="{{ path('adherent_index') }}">back to list</a>
+	</main>
+{% endblock %}

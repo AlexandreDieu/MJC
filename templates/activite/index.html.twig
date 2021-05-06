@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Activite index
+{% endblock %}
+{% block body %}
+	<main>
+		<h1>Activite index</h1>
+
+		<table class="table tableGestion">
+			<thead class="tableHead">
+				<tr>
+					<th>Id</th>
+					<th>Lieu</th>
+					<th>DateHeure</th>
+					<th>Img</th>
+					<th>Nom</th>
+					<th>actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for activite in activites %}
+					<tr>
+						<td>{{ activite.id }}</td>
+						<td>{{ activite.lieu }}</td>
+						<td>{{ activite.dateHeure ? activite.dateHeure|date('Y-m-d H:i:s') : '' }}</td>
+						<td>{{ activite.img }}</td>
+						<td>{{ activite.nom }}</td>
+						<td>
+							<a href="{{ path('activite_show', {'id': activite.id}) }}">
+								<i class="far fa-eye"></a>
+								<a href="{{ path('activite_edit', {'id': activite.id}) }}">
+									<i class="fas fa-edit"></i>
+								</a>
+							</td>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="6">no records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<a href="{{ path('activite_new') }}">Create new</a>
+	</main>
+{% endblock %}

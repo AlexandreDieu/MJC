@@ -6,9 +6,10 @@
 			{% block title %}Welcome!
 			{% endblock %}
 		</title>
-		{# Run `composer require symfony/webpack-encore-bundle and uncomment the following Encore helpers to start using Symfony UX #}
-		{% block stylesheets %}
-			<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/form.css">
+		<link rel="stylesheet" href="/css/table.css"> {% block stylesheets %}{% endblock %}
+		{% block fonts %}
 			<link rel="preconnect" href="https://fonts.gstatic.com">
 			<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 			<style>
@@ -16,16 +17,19 @@
 					font-family: 'Montserrat', sans-serif;
 				}
 			</style>
-			{#{{ encore_entry_link_tags('app') }}#}
 		{% endblock %}
-		{% block javascripts %}
-			{#{{ encore_entry_script_tags('app') }}#}
-		{% endblock %}
+		{% block javascripts %}{% endblock %}
 	</head>
 	<body>
-		{% block body %}
+		{% block nav %}
 			{% include "template_parts/_navmenu.html.twig" %}
 			{% include "template_parts/_sidemenu.html.twig" %}
+		{% endblock %}
+
+		{% block body %}{% endblock %}
+
+		{% block scripts %}
+			<script src="https://kit.fontawesome.com/433f9c0cfe.js" crossorigin="anonymous"></script>
 		{% endblock %}
 	</body>
 </html>

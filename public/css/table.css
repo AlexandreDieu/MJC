@@ -1,10 +1,21 @@
-main{
-    text-align: center;
-    margin-top:5%;
+table{
+	border-spacing: 0;
+	color:white;
 }
-.tableGestion{
-    border: 1px solid black;
+tbody{
+	overflow: scroll;
 }
-.tableGestion{
-margin: 2% auto;
+.tableGestion {
+	margin: 2% auto;
+	width: 85%;
 }
+tbody tr:nth-child(even){
+	background-color: #B6B6B6;
+}
+tbody tr:nth-child(odd){
+	background-color: #979797;
+}
+.tableHead {
+    background-color: #6A3547;
+}
+
