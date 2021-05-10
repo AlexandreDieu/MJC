@@ -18,7 +18,7 @@ class ActiviteFixtures extends Fixture
         $bienEtre->setImg("img.jpg");
         $manager->persist($bienEtre);
 
-        for($i = 1; $i <= 10; $i++){
+        for($i = 1; $i <= 50; $i++){
 
             $activite = new Activite();
             $activite->setNom("Activite " . $i);

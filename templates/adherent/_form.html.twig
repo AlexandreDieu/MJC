@@ -1,6 +1,15 @@
+{% block styleshett %}
+	<link rel="stylesheet" href="/css/adherent_modif.css">
+{% endblock %}
 {{ form_start(form) }}
-<div class="form-group">
-	{{ form_widget(form) }}
+<div class="form-group first-container">
+	{{ form_row(form.image) }}
+	{{ form_row(form.email, {'attr': {'placeholder': 'Email'}}) }}
+	{{ form_row(form.nom, {'attr': {'placeholder': 'Nom'}}) }}
+	{{ form_row(form.prenom, {'attr': {'placeholder': 'Prenom'}}) }}
 </div>
+{{ form_row(form.isVerified) }}
+{{ form_row(form.telephone) }}
+{{ form_row(form.securiteSociale) }}
 <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

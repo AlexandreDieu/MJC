@@ -32,19 +32,17 @@ class User extends Fixture
             $user->setPassword($hash);
             $manager->persist($user);
         }
-        for ($i = 1; $i <= 10; $i++) {
+        // for ($i = 1; $i <= 10; $i++) {
 
-            $partenaire = new Partenaire();
-            $partenaire->setNomResponsable("TATOR " . $i);
-            $partenaire->setPrenomResponsable("TotoR " . $i);
-            $partenaire->setNomContact("TATOR " . $i);
-            $partenaire->setPrenomContact("TotoR " . $i);
-            $partenaire->setPrenomContact("TotoR " . $i);
-            $partenaire->setStatutJuridique("Statut");
-            $hashP = $this->encoder->encodePassword($partenaire, "toto");
-            $partenaire->setPassword($hashP);
-            $manager->persist($partenaire);
-        }
+        //     $partenaire = new Partenaire();
+        //     $partenaire->setNomResponsable("TATOR " . $i);
+        //     $partenaire->setPrenomResponsable("TotoR " . $i);
+        //     $partenaire->setNomContact("TATOR " . $i);
+        //     $partenaire->setPrenomContact("TotoR " . $i);
+        //     $partenaire->setPrenomContact("TotoR " . $i);
+        //     $partenaire->setStatutJuridique("Statut");
+        //     $manager->persist($partenaire);
+        // }
 
         $manager->flush();
     }

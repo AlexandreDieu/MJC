@@ -1,0 +1,141 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 4vw 1fr;
+    column-gap: 8vw;
+    row-gap: 1vw;
+    padding: 5vw 3vw 5vw 7vw;
+    background: #EFEDEB;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    grid-template-areas: 
+         "carte1 carte2 carte3"
+         "barre barre barre"
+         "carte4 carte5 carte6";
+}
+main :nth-child(1) {
+    grid-area: carte1;
+}
+main :nth-child(2) {
+    grid-area: carte2;
+}
+main :nth-child(3) {
+    grid-area: carte3;
+}
+main :nth-child(4) {
+    grid-area: barre;
+}
+main :nth-child(5) {
+    grid-area: carte4;
+}
+main :nth-child(6) {
+    grid-area: carte5;
+}
+main :nth-child(7) {
+    grid-area: carte6;
+}
+section {
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    background: #9A6463;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 32px 26px rgba(0, 0, 0, 0.15);
+    grid-template-areas: 
+    "titre"
+    "form"
+    "btn";
+}
+section :nth-child(1) {
+    grid-area: titre;
+}
+section :nth-child(2) {
+    grid-area: form;
+}
+section :nth-child(3) {
+    grid-area: btn;
+}
+.barre {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: "titre input";
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    margin: 1.2vw;
+    font-size: 1.5vw;
+}
+.avatar {
+    display: grid;
+    grid-template-rows: 2fr 4fr 1fr;
+    background: #9A6463;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 32px 26px rgba(0, 0, 0, 0.15);
+    grid-template-areas: 
+    "titre"
+    "form"
+    "btn";
+}
+.image {
+    grid-area: titre;
+    background: url(../img/photo-1483737946376-7c6c89443adb.jpeg) center;
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
+    margin: auto;
+}
+label {
+    font-size: 0.8vw;
+}
+input {
+    margin: 0.5vw 1vw 1vw 1vw;
+    border-radius: 10px;
+    padding: 0.4vw;
+    border-style: none;
+    font-size: 1.1vw;
+}
+textarea {
+    margin: 0.5vw 1vw 1vw 1vw;
+    border-radius: 10px;
+    border-style: none;
+    height: 100%;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+th {
+    font-size: 0.9vw;
+    font-weight: normal;
+}
+#btn-modif{
+    width: 10vw;
+    height: 2vw;
+    background: #009BFF;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+}
+#btn-statut {
+    background: #569854;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+#type-compte {
+    grid-area: input;
+    width: 12vw;
+    height: 1.5vw;
+    margin: auto;
+}
+#btn-ajout {
+    width: 10vw;
+    height: 2vw;
+    background: #009BFF;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+}

@@ -9,11 +9,12 @@
 				<i class="fas fa-search"></i>
 			</button>
 		</div>
-				{% if app.user %}
+		{% if app.user %}
 			<div class="mb-3">
-				You are logged in as
-				{{ app.user.username }},
-				<a href="{{ path('app_logout') }}"><i class="fas fa-power-off"></i></a>
+				You are logged in as {{ app.user.username }},
+				<a href="{{ path('app_logout') }}">
+					<i class="fas fa-power-off"></i>
+				</a>
 			</div>
 		{% endif %}
 	</nav>
