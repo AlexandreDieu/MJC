@@ -84,6 +84,41 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $birthday;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $profession;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $paiement;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $cafNuméro;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $identifiant;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $genre;
     
     public function __construct()
     {
@@ -306,6 +341,90 @@ class User implements UserInterface
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?\DateTimeInterface
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(\DateTimeInterface $birthday): self
+    {
+        $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getProfession(): ?string
+    {
+        return $this->profession;
+    }
+
+    public function setProfession(?string $profession): self
+    {
+        $this->profession = $profession;
+
+        return $this;
+    }
+
+    public function getPaiement(): ?bool
+    {
+        return $this->paiement;
+    }
+
+    public function setPaiement(bool $paiement): self
+    {
+        $this->paiement = $paiement;
+
+        return $this;
+    }
+
+    public function getCafNuméro(): ?string
+    {
+        return $this->cafNuméro;
+    }
+
+    public function setCafNuméro(?string $cafNuméro): self
+    {
+        $this->cafNuméro = $cafNuméro;
+
+        return $this;
+    }
+
+    public function getIdentifiant(): ?string
+    {
+        return $this->identifiant;
+    }
+
+    public function setIdentifiant(string $identifiant): self
+    {
+        $this->identifiant = $identifiant;
+
+        return $this;
+    }
+
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(string $genre): self
+    {
+        $this->genre = $genre;
 
         return $this;
     }

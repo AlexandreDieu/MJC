@@ -28,21 +28,15 @@ class User extends Fixture
             $user->setTelephone("060102030" . $i);
             $user->setIsVerified(true);
             $user->setNewsletter(true);
+            $user->setCafNuméro("000011112222");
+            $user->setPaiement(true);
+            $user->setAdresse("10 boulevard d'Hollywood");
+            $user->setBirthday(new \DateTime());
             $hash = $this->encoder->encodePassword($user, "toto");
             $user->setPassword($hash);
+            $user->setGenre('M');
             $manager->persist($user);
         }
-        // for ($i = 1; $i <= 10; $i++) {
-
-        //     $partenaire = new Partenaire();
-        //     $partenaire->setNomResponsable("TATOR " . $i);
-        //     $partenaire->setPrenomResponsable("TotoR " . $i);
-        //     $partenaire->setNomContact("TATOR " . $i);
-        //     $partenaire->setPrenomContact("TotoR " . $i);
-        //     $partenaire->setPrenomContact("TotoR " . $i);
-        //     $partenaire->setStatutJuridique("Statut");
-        //     $manager->persist($partenaire);
-        // }
 
         $manager->flush();
     }

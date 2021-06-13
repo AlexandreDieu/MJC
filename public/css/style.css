@@ -1,7 +1,8 @@
-* {
+body{
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	text-decoration: none;
 }
 main {
 	margin-top: 5%;
