@@ -50,6 +50,11 @@ class Activite
      */
     private $user;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $animateur;
+
     public function __construct()
     {
         $this->user = new ArrayCollection();
@@ -146,5 +151,17 @@ class Activite
     public function __toString()
     {
         return $this->nom;
+    }
+
+    public function getAnimateur(): ?string
+    {
+        return $this->animateur;
+    }
+
+    public function setAnimateur(?string $animateur): self
+    {
+        $this->animateur = $animateur;
+
+        return $this;
     }
 }

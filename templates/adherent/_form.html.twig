@@ -1,34 +1,21 @@
-{% block stylesheets %}
-	<link rel="stylesheet" href="/css/form_modif.css">
-{% endblock %}
-{{ form_start(form) }}
 <section class="new-container">
-	<div class="container-flex">
-
-		{{ form_row(form.nom, {'attr': {'placeholder': 'Nom'}}) }}
-		{{ form_row(form.prenom, {'attr': {'placeholder': 'Prenom'}}) }}
-	</div>
-	<div class="container-flex">
-
-		{{ form_row(form.adresse, {'attr': {'placeholder': 'Adresse'}}) }}
-		{{ form_row(form.securiteSociale, {'attr': {'placeholder': 'Sécurité social'}}) }}
-	</div>
-	<div class="container-flex">
-
-		{{ form_row(form.telephone, {'attr': {'placeholder': 'Telephone'}}) }}
-		{{ form_row(form.email, {'attr': {'placeholder': 'Email'}}) }}
-		
-	</div>
-		<div class="container-flex">
-	
-		{{ form_row(form.isVerified) }}
-		{{ form_row(form.birthday) }}
-		{{ form_row(form.newsletter) }}
-		{{ form_row(form.image) }}
-
-	</div>
-	
-
-	<button class="btn">{{ button_label|default('Save') }}</button>
+	{{ form_start(form) }}
+		<div class="form-control text-center mx-3">
+			{{ form_row(form.nom, {'label': 'Nom de famille', 'attr': {'placeholder': 'Nom de famille...'} }) }}
+			{{ form_row(form.prenom, {'label': 'Prénom', 'attr': {'placeholder': 'Prénom...'} }) }}
+			{{ form_row(form.adresse, {'label': 'Adresse', 'attr': {'placeholder': 'Adresse...'} }) }}
+			{{ form_row(form.securiteSociale, {'label': 'Numéro de sécurité sociale', 'attr': {'placeholder': 'Numéro de sécurité sociale...'} }) }}
+			{{ form_row(form.telephone, {'label': 'Numéro de téléphone', 'attr': {'placeholder': 'Numéro de téléphone...'} }) }}
+			{{ form_row(form.email, {'label': 'Email', 'attr': {'placeholder': 'Email...'} }) }}
+			{{ form_row(form.birthday, {'label': 'Date de naissance' }) }}
+			{{ form_row(form.image, {'label': 'URL de l\'image', 'attr': {'placeholder': 'imgexemple.jpg'} }) }}
+		</div>
+		<div class="form-control text-center mx-3">
+			{{ form(form.newsletter, {'label': 'Abonnement a la Newsletter' }) }}
+			{{ form(form.isVerified, {'label': 'Personne Vérifié' }) }}
+		</div>
 	{{ form_end(form) }}
 </section>
+<button class="btn btn-primary m-1">
+	{{ button_label|default('Save') }}
+</button>

@@ -1,37 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Activite index
-{% endblock %}
 {% block body %}
 	<main>
-		<h1>Activite index</h1>
+		<h1>Liste des activités</h1>
 
-		<table class="table tableGestion">
+		<table class="table container">
 			<thead class="tableHead">
-				<tr>
-					<th>Id</th>
-					<th>Lieu</th>
-					<th>DateHeure</th>
-					<th>Img</th>
+				<tr class="text-light">
 					<th>Nom</th>
+					<th>Date</th>
+					<th>Lieu</th>
+					<th>Animateur</th>
 					<th>actions</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for activite in activites %}
 					<tr>
-						<td>{{ activite.id }}</td>
-						<td>{{ activite.lieu }}</td>
-						<td>{{ activite.dateHeure ? activite.dateHeure|date('Y-m-d H:i:s') : '' }}</td>
-						<td>{{ activite.img }}</td>
 						<td>{{ activite.nom }}</td>
+						<td>{{ activite.dateHeure ? activite.dateHeure|date('Y-m-d H:i:s') : '' }}</td>
+						<td>{{ activite.lieu }}</td>
+						<td>{{ activite.animateur }}</td>
 						<td>
 							<a href="{{ path('activite_show', {'id': activite.id}) }}">
-								<i class="far fa-eye"></a>
-								<a href="{{ path('activite_edit', {'id': activite.id}) }}">
-									<i class="fas fa-edit"></i>
-								</a>
-							</td>
+								<i class="far fa-eye"></i>
+							</a>
+							|
+							<a href="{{ path('activite_edit', {'id': activite.id}) }}">
+								<i class="fas fa-edit"></i>
+							</a>
 						</td>
 					</tr>
 				{% else %}
@@ -41,7 +38,6 @@
 				{% endfor %}
 			</tbody>
 		</table>
-
-		<a href="{{ path('activite_new') }}">Create new</a>
+		<a class="btn btn-primary" href="{{ path('activite_new') }}">Create new</a>
 	</main>
 {% endblock %}

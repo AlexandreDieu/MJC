@@ -1,14 +1,3 @@
-table{
-	border-spacing: 0;
-	color:white;
-}
-tbody{
-	overflow: scroll;
-}
-.tableGestion {
-	margin: 2% auto;
-	width: 85%;
-}
 tbody tr:nth-child(even){
 	background-color: #B6B6B6;
 }
