@@ -21,6 +21,7 @@ class User extends Fixture
         for ($i = 1; $i <= 10; $i++) {
 
             $user = new EntityUser();
+            $user->setIdentifiant("toto" . $i);
             $user->setSecuriteSociale("01928372894" . $i);
             $user->setNom("TATO " . $i);
             $user->setPrenom("Toto " . $i);
@@ -37,6 +38,23 @@ class User extends Fixture
             $user->setGenre('M');
             $manager->persist($user);
         }
+        $admin = new EntityUser();
+        $admin->setIdentifiant("admin");
+        $admin->setSecuriteSociale("000");
+        $admin->setNom("admin");
+        $admin->setPrenom("admin");
+        $admin->setEmail("admin@admin.fr");
+        $admin->setTelephone("0606060606");
+        $admin->setIsVerified(true);
+        $admin->setNewsletter(true);
+        $admin->setCafNuméro("000011112222");
+        $admin->setPaiement(true);
+        $admin->setAdresse("1 admin");
+        $admin->setBirthday(new \DateTime());
+        $hash = $this->encoder->encodePassword($admin, "admin");
+        $admin->setPassword($hash);
+        $admin->setGenre('M');
+        $manager->persist($admin);
 
         $manager->flush();
     }

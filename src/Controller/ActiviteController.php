@@ -20,6 +20,8 @@ class ActiviteController extends AbstractController
      */
     public function index(ActiviteRepository $activiteRepository): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('activite/index.html.twig', [
             'activites' => $activiteRepository->findAll(),
         ]);
@@ -30,6 +32,8 @@ class ActiviteController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $activite = new Activite();
         $form = $this->createForm(ActiviteType::class, $activite);
         $form->handleRequest($request);
@@ -53,6 +57,8 @@ class ActiviteController extends AbstractController
      */
     public function show(Activite $activite): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('activite/show.html.twig', [
             'activite' => $activite,
         ]);
@@ -63,6 +69,8 @@ class ActiviteController extends AbstractController
      */
     public function edit(Request $request, Activite $activite): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(ActiviteType::class, $activite);
         $form->handleRequest($request);
 
@@ -83,6 +91,8 @@ class ActiviteController extends AbstractController
      */
     public function delete(Request $request, Activite $activite): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         if ($this->isCsrfTokenValid('delete'.$activite->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($activite);

@@ -20,6 +20,8 @@ class PartenaireController extends AbstractController
      */
     public function index(PartenaireRepository $partenaireRepository): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('partenaire/index.html.twig', [
             'partenaires' => $partenaireRepository->findAll(),
         ]);
@@ -30,6 +32,8 @@ class PartenaireController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $partenaire = new Partenaire();
         $form = $this->createForm(PartenaireType::class, $partenaire);
         $form->handleRequest($request);
@@ -53,6 +57,8 @@ class PartenaireController extends AbstractController
      */
     public function show(Partenaire $partenaire): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('partenaire/show.html.twig', [
             'partenaire' => $partenaire,
         ]);
@@ -63,6 +69,8 @@ class PartenaireController extends AbstractController
      */
     public function edit(Request $request, Partenaire $partenaire): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(PartenaireType::class, $partenaire);
         $form->handleRequest($request);
 
@@ -83,6 +91,8 @@ class PartenaireController extends AbstractController
      */
     public function delete(Request $request, Partenaire $partenaire): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         if ($this->isCsrfTokenValid('delete'.$partenaire->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($partenaire);
