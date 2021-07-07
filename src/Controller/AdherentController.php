@@ -91,12 +91,4 @@ class AdherentController extends AbstractController
 
         return $this->redirectToRoute('adherent_index');
     }
-    /**
-     * @Route("/activite/add/{id}, name="activite_add)
-     */
-    // public function add($id, Request $request) {
-    //     $session = $request->getSession();
-    //     $user->addActivite();
-    // }
-
 }

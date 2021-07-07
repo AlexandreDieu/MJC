@@ -1,4 +1,4 @@
-body{
+body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -8,4 +8,18 @@ main {
 	margin-top: 5%;
 	margin-left: 3.2vw;
 }
-i { color:white;}
+i {
+	color: white;
+}
+#co-btn {
+	background-color: #4CAF50; 
+	border: none;
+	color: white;
+	padding: 1px 5px;
+	border-radius: 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin:auto;
+}
