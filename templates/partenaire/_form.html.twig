@@ -1,4 +1,17 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<section class="new-container">
+	{{ form_start(form) }}
+	<div class="form-control text-center mx-3">
+		{{ form_row(form.nomStructure, {'label': 'nomStructure', 'attr': {'placeholder': 'nomStructure'} } ) }}
+		{{ form_row(form.statutJuridique, {'label': 'statutJuridique', 'attr': {'placeholder': 'statutJuridique'} } ) }}
+		{{ form_row(form.nomResponsable, {'label': 'nomResponsable', 'attr': {'placeholder': 'nomResponsable'} } ) }}
+		{{ form_row(form.prenomResponsable, {'label': 'prenomResponsable', 'attr': {'placeholder': 'prenomResponsable'} } ) }}
+		{{ form_row(form.nomContact, {'label': 'nomContact', 'attr': {'placeholder': 'nomContact'} } ) }}
+		{{ form_row(form.prenomContact, {'label': 'prenomContact', 'attr': {'placeholder': 'prenomContact'} } ) }}
+		{{ form_row(form.statutPartenaire, {'label': 'statutPartenaire', 'attr': {'placeholder': 'statutPartenaire'} } ) }}
+
+	</div>
+	{{ form_end(form) }}
+</section>
+<button class="btn btn-primary m-1">
+	{{ button_label|default('Valider') }}
+</button>

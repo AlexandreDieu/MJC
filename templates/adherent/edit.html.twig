@@ -4,8 +4,8 @@
 	<main>
 		<h1>Modification adhérent</h1>
 
-		{{ include('adherent/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 		<div>
+			{{ include('adherent/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 			<a class="btn btn-secondary m-1" href="{{ path('adherent_index') }}">Revenir à la liste</a>
 		</div>
 

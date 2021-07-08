@@ -16,7 +16,6 @@ class EvenementType extends AbstractType
             ->add('dateHeure')
             ->add('img')
             ->add('nom')
-            ->add('user')
         ;
     }
 

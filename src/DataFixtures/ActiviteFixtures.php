@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Activite;
 use App\Entity\Categorie;
 use App\Entity\Evenement;
+use App\Entity\Partenaire;
 use DateTime;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -38,6 +39,17 @@ class ActiviteFixtures extends Fixture
             $evenement->setLieu("Lorem ipsum dolor sitae Lorem ipsum dolor sitae Lorem ipsum dolor sitae");
             
             $manager->persist($evenement);
+        }
+        for($i = 1; $i <= 5; $i++){
+
+            $partenaire = new Partenaire();
+            $partenaire->setNomStructure("Strucutre" . $i);
+            $partenaire->setStatutJuridique("Statut" . $i);
+            $partenaire->setNomResponsable("ResponsableN" . $i);
+            $partenaire->setPrenomResponsable("ResponsableP" . $i);
+          
+            
+            $manager->persist($partenaire);
         }
         $manager->flush();
     }

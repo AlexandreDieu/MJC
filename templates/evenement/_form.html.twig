@@ -1,4 +1,13 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<section class="new-container">
+	{{ form_start(form) }}
+		<div class="form-control text-center mx-3">
+			{{ form_row(form.lieu, {'label': 'Lieu', 'attr': {'placeholder': 'Lieu de l\'événement...'} }) }}
+			{{ form_row(form.img, {'label': 'Image', 'attr': {'placeholder': 'Image.jpg'} }) }}
+			{{ form_row(form.nom, {'label': 'Nom', 'attr': {'placeholder': 'Nom de l\événement'} }) }}
+			{{ form_row(form.dateHeure, {'label': 'Date', 'attr': {'placeholder': 'Date et Heure de l\'événement'} }) }}
+		</div>
+	{{ form_end(form) }}
+</section>
+<button class="btn btn-primary m-1">
+	{{ button_label|default('Valider') }}
+</button>

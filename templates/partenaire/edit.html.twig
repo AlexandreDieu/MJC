@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Partenaire{% endblock %}
+
 
 {% block body %}
-    <h1>Edit Partenaire</h1>
+<main>
+    <h1>Modification Partenaire</h1>
 
-    {{ include('partenaire/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('partenaire/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    <a href="{{ path('partenaire_index') }}">back to list</a>
+    <a class="btn btn-secondary m-1" href="{{ path('partenaire_index') }}">Revenir à la liste</a>
 
     {{ include('partenaire/_delete_form.html.twig') }}
+</main>
 {% endblock %}

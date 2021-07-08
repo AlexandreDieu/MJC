@@ -2,10 +2,10 @@
 
 {% block body %}
 	<main>
-		<h1>Evenement index</h1>
-		<table class="table tableGestion">
+		<h1>Liste des événements</h1>
+		<table class="table container">
 			<thead class="tableHead">
-				<tr>
+				<tr class="text-light">
 					<th>Id</th>
 					<th>Lieu</th>
 					<th>DateHeure</th>
@@ -35,6 +35,6 @@
 			</tbody>
 		</table>
 
-		<a href="{{ path('evenement_new') }}">Create new</a>
+		<a class="btn btn-primary" href="{{ path('evenement_new') }}">Ajouter Evénement</a>
 	</main>
 {% endblock %}

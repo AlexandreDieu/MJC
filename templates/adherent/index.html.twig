@@ -27,9 +27,7 @@
 							<td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
 							<td>{{ user.newsletter ? 'Yes' : 'No' }}</td>
 							<td>
-								<a href="{{ path('adherent_show', {'id': user.id}) }}">
-									<i class="fas fa-eye"></i>
-								</a>
+								<a href="{{ path('adherent_show', {'id': user.id}) }}"><i class="fas fa-eye"></i></a>
 								|
 								<a href="{{ path('adherent_edit', {'id': user.id}) }}">
 									<i class="fas fa-edit"></i>
@@ -46,6 +44,5 @@
 		<a class="btn btn-primary" href="{{ path('adherent_new') }}">Ajouter un adhérent</a>
 	</main>
 
-	<script src="https://kit.fontawesome.com/433f9c0cfe.js" crossorigin="anonymous"></script>
 
 {% endblock %}
